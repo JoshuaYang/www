@@ -6,7 +6,7 @@
 
         <div class="content-container">
             <h1>Joshua Yang</h1>
-            <h2>code / design / movie</h2>
+            <h2>code / design / movie / biology</h2>
         </div>
     </div>
 </template>
