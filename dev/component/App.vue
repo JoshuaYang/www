@@ -16,6 +16,9 @@
             <li>
                 <a target="_blank" href="https://github.com/JoshuaYang">Github</a>
             </li>
+            <li>
+                <a target="_blank" href="http://blog.orzy.me/">Blog</a>
+            </li>
         </ul>
     </div>
 </template>
