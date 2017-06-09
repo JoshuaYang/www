@@ -8,6 +8,15 @@
             <h1>Joshua Yang</h1>
             <h2>code / design / movie / biology</h2>
         </div>
+
+        <ul class="link-container">
+            <li>
+                <a target="_blank" href="https://www.zhihu.com/people/wan-fa-zhu-mie">知乎</a>
+            </li>
+            <li>
+                <a target="_blank" href="https://github.com/JoshuaYang">Github</a>
+            </li>
+        </ul>
     </div>
 </template>
 
@@ -20,6 +29,7 @@ export default {
 :root {
     --banner-h1-font-size: 80px;
     --banner-h2-font-size: 25px;
+    --banner-link-font-size: 25px;
     --banner-land-width: 800px;
 }
 
@@ -27,6 +37,7 @@ export default {
     :root {
         --banner-h1-font-size: 50px;
         --banner-h2-font-size: 20px;
+        --banner-link-font-size: 20px;
         --banner-land-width: 600px;
     }
 }
@@ -82,6 +93,29 @@ export default {
             font-family: 'BrandonGrotesque-Regular';
             font-size: var(--banner-h2-font-size);
             color: #45b29a;
+        }
+    }
+
+    .link-container {
+        position: absolute;
+        top: 2.5%;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        li {
+            margin: 0 5%;
+
+            a {
+                font-family: 'BrandonGrotesque-Regular';
+                font-size: var(--banner-link-font-size);
+                color: #45b29a;
+
+                .desktop &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
     }
 }
