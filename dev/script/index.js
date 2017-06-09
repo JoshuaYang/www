@@ -7,7 +7,6 @@ import Vue from 'vue';
 import App from '../component/App.vue';
 
 import Platform from 'joshua-platform';
-import Sensitive from './plugin/Sensitive';
 
 window.Platform = Platform;
 
