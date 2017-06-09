@@ -26,6 +26,8 @@ export default {
 </script>
 
 <style lang="scss">
+$skin-color: #45b29a;
+
 :root {
     --banner-h1-font-size: 80px;
     --banner-h2-font-size: 25px;
@@ -40,6 +42,11 @@ export default {
         --banner-link-font-size: 20px;
         --banner-land-width: 600px;
     }
+}
+
+body {
+    font-family: 'BrandonGrotesque-Regular';
+    color: $skin-color;
 }
 
 .banner {
@@ -85,14 +92,10 @@ export default {
         transform: translateY(-15%);
 
         h1 {
-            font-family: 'BrandonGrotesque-Regular';
             font-size: var(--banner-h1-font-size);
-            color: #45b29a;
         }
         h2 {
-            font-family: 'BrandonGrotesque-Regular';
             font-size: var(--banner-h2-font-size);
-            color: #45b29a;
         }
     }
 
@@ -108,12 +111,26 @@ export default {
             margin: 0 5%;
 
             a {
-                font-family: 'BrandonGrotesque-Regular';
+                position: relative;
                 font-size: var(--banner-link-font-size);
-                color: #45b29a;
+                color: $skin-color;
 
-                .desktop &:hover {
-                    text-decoration: underline;
+                .desktop & {
+                    &:after {
+                        content: "";
+                        display: block;
+                        width: 100%;
+                        height: 2px;
+                        background-color: #45b29a;
+                        transform: scaleX(0);
+                        transition: transform 0.3s ease;
+                    }
+
+                    &:hover {
+                        &:after {
+                            transform: scaleX(1);
+                        }
+                    }
                 }
             }
         }
