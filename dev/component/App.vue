@@ -2,7 +2,7 @@
     <div class="app-container">
         <banner></banner>
 
-        <router-view></router-view>
+        <!-- <router-view></router-view> -->
     </div>
 </template>
 
@@ -20,7 +20,7 @@ export default {
 @import "../style/reset";
 @import "../style/mixin";
 
-// @include font-face("Lato-Regular");
+@include font-face("BrandonGrotesque-Regular");
 
 :root{
     --color1: red;
