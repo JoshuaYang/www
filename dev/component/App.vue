@@ -94,13 +94,13 @@ body {
         &.cloud1 {
             top: 50%;
             left: 10%;
-            animation: cloud-animate 5s ease infinite;
+            animation: cloud-animate 6s ease 0.1s infinite;
         }
 
         &.cloud2 {
             top: 15%;
             right: 10%;
-            animation: cloud-animate 6s ease 1s infinite;
+            animation: cloud-animate 8s ease 1s infinite;
         }
     }
 
