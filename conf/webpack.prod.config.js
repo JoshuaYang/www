@@ -29,19 +29,14 @@ module.exports = merge(baseWebpackConfig, {
         }),
         new CopyWebpackPlugin([
             {
-                // from: './dev',
-                from: './dev/favicon.ico',
+                from: './dev',
             },
         ], {
             ignore: [
-                // '*.html',
-                // 'router.js',
-                // 'style/**/*',
-                // 'script/**/*',
-                // 'store/**/*',
-                // 'component/**/*',
-                // 'data/**/*',
-                // 'font/**/*',
+                '*.html',
+                'style/**/*',
+                'script/**/*',
+                'font/**/*',
             ],
         }),
     ],
