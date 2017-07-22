@@ -107,15 +107,15 @@ module.exports = {
                 },
             },
         }),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'vendor',
-            minChunks(module) {
-                return module.context && module.context.includes('node_modules');
-            },
-        }),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'manifest', // But since there are no more common modules between them we end up with just the runtime code included in the manifest file
-        }),
+        // new webpack.optimize.CommonsChunkPlugin({
+        //     name: 'vendor',
+        //     minChunks(module) {
+        //         return module.context && module.context.includes('node_modules');
+        //     },
+        // }),
+        // new webpack.optimize.CommonsChunkPlugin({
+        //     name: 'manifest', // But since there are no more common modules between them we end up with just the runtime code included in the manifest file
+        // }),
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: path.join(process.cwd(), 'dev', 'index.html'),
