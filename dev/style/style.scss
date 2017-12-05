@@ -96,6 +96,10 @@ body {
         li {
             margin: 0 5%;
 
+            .mobile & {
+                margin: 0 4.4%;
+            }
+
             a {
                 position: relative;
                 font-size: var(--banner-link-font-size);
