@@ -1,7 +1,7 @@
 {
-  "name": "ssr-template",
+  "name": "www",
   "version": "1.0.0",
-  "description": "ssr template",
+  "description": "www",
   "author": "Joshua Yang <yss901025@gmail.com>",
   "private": true,
   "scripts": {
