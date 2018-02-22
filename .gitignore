@@ -1,12 +1,12 @@
-.DS_Store
-.svn
-.sass-cache
-.vscode
-.tmp
+# dependencies
 node_modules
-bower_components
-tmp
+
+# logs
+npm-debug.log
+
+# Nuxt build
+.nuxt
+
+# Nuxt generate
 dist
-archive
-archive.zip
-*.log
+.DS_Store

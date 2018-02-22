@@ -1,6 +1,38 @@
-@import "../style/reset";
-@import "../style/mixin";
+<template>
+  <div class="banner">
+        <img class="land" src="~/assets/image/land.svg" alt="">
+        <img class="cloud cloud1" src="~/assets/image/cloud.svg" alt="">
+        <img class="cloud cloud2" src="~/assets/image/cloud.svg" alt="">
 
+        <div class="content-container">
+            <h1>Joshua Yang</h1>
+            <h2>code / design / movie / biology</h2>
+        </div>
+
+        <ul class="link-container">
+            <li>
+                <a target="_blank" href="https://www.zhihu.com/people/wan-fa-zhu-mie">知乎</a>
+            </li>
+            <li>
+                <a target="_blank" href="https://github.com/JoshuaYang">Github</a>
+            </li>
+            <li>
+                <a target="_blank" href="http://blog.orzy.me/">Blog</a>
+            </li>
+            <li>
+                <a target="_blank" href="http://showcase.orzy.me/">Showcase</a>
+            </li>
+        </ul>
+    </div>
+</template>
+
+<script>
+export default {
+
+};
+</script>
+
+<style lang="scss">
 @include font-face("BrandonGrotesque-Regular");
 
 $skin-color: #45b29a;
@@ -21,24 +53,15 @@ $skin-color: #45b29a;
     }
 }
 
-html, body {
-    width: 100%;
-    height: 100%;
-}
-
 body {
     font-family: 'BrandonGrotesque-Regular';
     color: $skin-color;
-
-    .desktop & {
-        min-height: 600px;
-    }
 }
 
 .banner {
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
     background-color: #e0ebe8;
 
@@ -94,35 +117,42 @@ body {
         justify-content: center;
 
         li {
-            margin: 0 5%;
-
-            .mobile & {
-                margin: 0 4.4%;
-            }
+            margin: 0 4.4%;
 
             a {
                 position: relative;
                 font-size: var(--banner-link-font-size);
                 color: $skin-color;
 
-                .desktop & {
-                    &:after {
-                        content: "";
-                        display: block;
-                        width: 100%;
-                        height: 2px;
-                        background-color: #45b29a;
-                        transform: scaleX(0);
-                        transition: transform 0.3s ease;
-                    }
+                &:after {
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 2px;
+                    background-color: #45b29a;
+                    transform: scaleX(0);
+                    transition: transform 0.3s ease;
+                }
 
-                    &:hover {
-                        &:after {
-                            transform: scaleX(1);
-                        }
+                &:hover {
+                    &:after {
+                        transform: scaleX(1);
                     }
                 }
             }
         }
     }
 }
+
+@keyframes cloud-animate {
+  0% {
+      transform: translateX(0%);
+  }
+  50% {
+      transform: translateX(50%);
+  }
+  100% {
+      transform: translateX(0%);
+  }
+}
+</style>
